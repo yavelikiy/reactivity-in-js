@@ -1,0 +1,43 @@
+.container {
+  cursor: pointer;
+}
+
+.expandedBase {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  pointer-events: all;
+
+  padding: 50px;
+  background: #0e223170;
+
+  box-sizing: border-box;
+}
+
+.expanded {
+  &-height {
+    .expandedBase();
+
+    > * {
+      height: 100%;
+    }
+  }
+
+  &-width {
+    .expandedBase();
+
+    > * {
+      width: 100%;
+    }
+  }
+}

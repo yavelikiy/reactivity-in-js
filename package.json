@@ -1,0 +1,38 @@
+{
+  "name": "reactivity-in-js",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack serve --mode=development --port 8081 --static dist",
+    "build": "webpack --mode=production --config webpack.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.3",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-transform-runtime": "7.14.5",
+    "@babel/preset-env": "7.12.1",
+    "@babel/preset-react": "7.12.5",
+    "@babel/register": "7.13.16",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint": "8.22.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "prettier": "2.8.1",
+    "webpack-dev-server": "^4.10.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.12.1",
+    "@babel/runtime": "7.14.6",
+    "animejs": "^3.2.1",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "less-loader": "^11.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-highlight": "^0.15.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

@@ -1,0 +1,56 @@
+@import "./../theme.less";
+
+.background {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 1s ease-in-out opacity;
+}
+
+.cop-header {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #ffd002 0%,
+    @secondary-orange 5%,
+    #d1641d 45%,
+    #5f2161 60%,
+    @main-blue 90%
+  );
+  opacity: 1;
+
+  &.leave {
+    background: radial-gradient(
+      circle at 30% 107%,
+      #ffd002 0%,
+      @secondary-orange 5%,
+      #d1641d 45%,
+      #5f2161 60%,
+      @main-blue 90%
+    );
+    opacity: 0;
+  }
+}
+
+.cop-exit {
+  background: radial-gradient(
+    circle at 30% 107%,
+    @main-blue 0%,
+    #5f2161 45%,
+    #d1641d 75%,
+    @secondary-orange 87%,
+    #ffd002 95%
+  );
+  opacity: 1;
+
+  &.leave {
+    background: radial-gradient(
+      circle at 30% 107%,
+      @main-blue 0%,
+      #5f2161 45%,
+      #d1641d 75%,
+      @secondary-orange 87%,
+      #ffd002 95%
+    );
+    opacity: 0;
+  }
+}

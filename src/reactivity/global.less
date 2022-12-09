@@ -1,0 +1,78 @@
+@import "./theme.less";
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(/public/font/PTSans-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(/public/font/PTSans-Bold.ttf);
+  font-weight: bold;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  min-height: 740px;
+
+  background: rgb(215, 215, 215);
+  background: radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.step {
+  position: relative;
+  width: 900px;
+  padding: 40px;
+  margin: 20px auto;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 48px;
+  line-height: 1.5;
+}
+
+.code-slide {
+  display: block;
+
+  width: 1200px;
+  height: 700px;
+  padding: 40px 60px;
+
+  font-size: 20px;
+  line-height: 22px;
+  &.big {
+    width: 1600px;
+    padding: 20px;
+  }
+}
+
+/*
+    ... and we enhance the styles for impress.js.
+
+    Basically we remove the margin and make inactive steps a little bit transparent.
+*/
+.impress-enabled .step {
+  margin: 0;
+  opacity: 0.3;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.impress-enabled .step.active {
+  opacity: 1;
+}

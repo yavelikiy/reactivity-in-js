@@ -1,0 +1,58 @@
+@import "../theme.less";
+
+@color: @secondary-orange;
+
+.shadow {
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px @color,
+    0 0 80px @color, 0 0 90px @color, 0 0 100px @color, 0 0 150px @color;
+}
+
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px @color,
+      0 0 80px @color, 0 0 90px @color, 0 0 100px @color, 0 0 150px @color;
+  }
+
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px @color,
+      0 0 45px @color, 0 0 55px @color, 0 0 70px @color, 0 0 80px @color;
+  }
+}
+
+.theEnd {
+  text-align: center;
+  font-size: 2em;
+  color: #ffffff;
+  .shadow();
+  animation: pulsate 1.5s infinite alternate;
+}
+
+.section-one {
+  color: #ffffff;
+  .shadow();
+  animation: flicker 4.5s infinite alternate;
+}
+
+.sectiontwo {
+  color: #ffffff;
+  .shadow();
+  animation: 7.5s flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px @color,
+      0 0 80px @color, 0 0 90px @color, 0 0 100px @color, 0 0 150px @color;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}

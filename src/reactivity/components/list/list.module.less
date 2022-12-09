@@ -1,0 +1,21 @@
+@import "../../theme.less";
+
+ul.list {
+  font-size: 0.8em;
+
+  > li {
+    display: flex;
+    align-items: center;
+  }
+
+  > li:before {
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    display: block;
+    margin-right: 1rem;
+    background-size: cover;
+    background: black no-repeat center;
+    border-radius: 1rem;
+  }
+}
