@@ -9,7 +9,7 @@ const initNameAnime = ({ parent, letters, delay, loop = true }) =>
       duration: 1500,
       elasticity: 600,
         delay: ( el, i ) => delay + 45 * ( i + 1 )
-        } ).
+        } )
     .add({
         targets: parent,
       opacity: 0,

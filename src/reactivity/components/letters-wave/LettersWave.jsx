@@ -10,7 +10,7 @@ const LettersWave = ({ text, loop = true }) => {
 
         if (parent) {
             const letters = parent.querySelectorAll("." + styles.letter);
-            initNameAnime( { parent, letters, delay: 1000, loop });
+            initNameAnime({ parent, letters, delay: 1000, loop });
 
             return () => {
                 anime.remove(parent);
@@ -22,13 +22,8 @@ const LettersWave = ({ text, loop = true }) => {
     return (
         <span className={styles.ml9} ref={ref}>
             <span className={styles.textWrapper}>
-        {text
-                        replaceAll( " ", "\u00A0" ).
-                        split( "" ).
-                        map( ( l, i ) => <span key={i} className={styles.letter}>{l}</span> )
+                {text.replaceAll( " ", "\u00A0" ).split( "" ).map( ( l, i ) => <span key={i} className={styles.letter}>{l}</span> )}
             </span>
-          ))}
-      </span>
         </span>
     );
 };
